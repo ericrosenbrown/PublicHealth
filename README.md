@@ -1,4 +1,4 @@
-DESCRIPTION OF RESEARCH:
+#DESCRIPTION OF RESEARCH:
 
 I first wrote a python program to clean the csv file due to transcription errors. This mostly cleans up lower/upper case, numbers, punctuation. I then attempted to create word-frequency vectors of each transcript and tried to train a multiclass SVM of 2^7 = 128 classes, for each possible combination of class. This classified terribly, and we assumed this may be because each class is not truly separate, they are probably correlated to each other, so we decided to try a classifier that wouldn't treat each class as independent.
 
