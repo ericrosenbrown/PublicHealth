@@ -1,5 +1,7 @@
 ## DESCRIPTION OF RESEARCH:
 
+The goal of this research was to take an csv file of people's opinions on why they drank alcohol (where they used natural language to describe their view) and associated survey labels of why they drank to semantically label new utterances. For example, someone might have said "I enjoy drinking because it's fun to do with my friends, it makes it easy to be at parties". They also filled out 7 yes or no questions, for example "you drink for oscial reasons". The goal was to take in novel utterances and predict the 7 labels. Check the csv for data.
+
 I first wrote a python program to clean the csv file due to transcription errors. This mostly cleans up lower/upper case, numbers, punctuation. I then attempted to create word-frequency vectors of each transcript and tried to train a multiclass SVM of 2^7 = 128 classes, for each possible combination of class. This classified terribly, and we assumed this may be because each class is not truly separate, they are probably correlated to each other, so we decided to try a classifier that wouldn't treat each class as independent.
 
 However, during this we noticed that many of the labels for the transcripts did not seem correct. For example, in many transcripts, people mention that they enjoy drinking with friends, but the label "drink for social reasons" was not selected. We thought that these noisy labelings could be bad, but haven't addressed this.
